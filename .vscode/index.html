@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevLinks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container"> <!--div com todo o conteúdo body-->
+
+      <div id="profile"> <!--div com elementos do perfil - foto e arroba -->
+
+        <img
+          src="https://avatars.githubusercontent.com/u/94575951?v=4"
+          alt="Perfil Talison Gomes"
+        />
+        <p>@TalisonGomes</p>
+      </div>
+
+      <div id="switch" onclick="toggleMode()"> <!-- Div com as tags do botão para mudança de tema -->
+      
+        <button></button>
+        <span></span>
+      </div>
+      
+      <div class="CONTEUDO"> <!-- Div com a lista contendo links de acesso -->
+      
+        <div class="list">
+          <ul>
+            <li>
+              <a href="#">Inscrever-se no NLW</a>
+            </li>
+            <li>
+              <a href="#">Baixar o meu e-book</a>
+            </li>
+            <li>
+              <a href="#">Ver meu portifólio</a>
+            </li>
+            <li>
+              <a href="#">Conheça o explorer</a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="social-links"> <!-- Div com os links de acesso as REDES SOCIALS (logos) -->
+
+          <a href="https://github.com/TalisonGL18" target="_blank">
+            <ion-icon name="Logo-github"></ion-icon>
+          </a>
+          <a href="https://www.instagram.com/tgomes_luz03/" target="_blank">
+            <ion-icon name="Logo-instagram"></ion-icon>
+          </a>
+          <a href="#" target="_blank">
+            <ion-icon name="Logo-youtube"></ion-icon>
+          </a>
+          <a href="#" target="_blank">
+            <ion-icon name="Logo-linkedin"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <p>
+      Feito com <ion-icon name="heart"></ion-icon> por
+      <a href="https://www.rocketseat.com.br/" target="_blank">Rocketseat</a>
+    </p>
+  </footer>
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script> <!-- Script responsável pelos icons-->
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+
+  <script src="Script.js"></script><!-- Script responsável pela conexão com a página JS-->
+</html>
