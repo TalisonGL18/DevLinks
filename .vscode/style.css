@@ -34,6 +34,7 @@ body {
 
   /* SHORTHAND - background: image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -73,29 +74,31 @@ body * {
   /* deixar o elemento do mesmo tamanho do span */
   width: 64px;
   margin: 4px auto;
-
 }
 /* SWITCH */
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
 
-
-/* POSICIONAMENTO DO BORTÃO */
+  /* POSICIONAMENTO DO BORTÃO */
 
   position: absolute;
   top: 50%;
   left: 0;
   z-index: 1;
-  transform:translateY(-50%);
+  transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -106,7 +109,6 @@ body * {
   border: 1px solid var(--stroke-color);
   border-radius: 9999px;
   backdrop-filter: bluer(4px);
-  
 }
 
 /* LIST */
@@ -170,4 +172,32 @@ footer {
 
 footer a {
   text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(assests/Dark.jpg);
+  }
+
+  .light {
+    --bg-url: url(assests/Light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
